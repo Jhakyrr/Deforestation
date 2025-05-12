@@ -1,0 +1,170 @@
+ <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SITE_TITLE</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+           <header>
+            <div class="site-title">Akym P Jean</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Deforestation</a></li>
+                    <li><a href="causes.html">Causes</a></li>
+                    <li><a href="impacts.html">Impacts</a></li>
+                    <li><a href="help.html">How you can help?</a></li>
+                     <li><a href="donation.html">Donation</a></li>
+                    
+ 
+ <section id="donate">
+  <h2>Support the Fight Against Deforestation</h2>
+  <p>Your contribution can make a real difference in protecting our planet's vital forests and the biodiversity they support. Please consider making a donation today.</p>
+
+  <div class="donation-options">
+    <button class="donation-button" data-amount="10">$1</button>
+    <button class="donation-button" data-amount="100">$5</button>
+    <button class="donation-button" data-amount="25">$25</button>
+    <button class="donation-button" data-amount="50">$50</button>
+    <button class="donation-button" data-amount="100">$100</button>
+    <div class="custom-amount">
+      <label for="custom-donation">Other Amount ($):</label>
+      <input type="number" id="custom-donation" name="custom-donation" min="1">
+      <button id="custom-donate-button">Donate</button>
+    </div>
+  </div>
+
+  <div class="payment-info">
+    <p>You will be securely redirected to our payment processor to complete your donation.
+    Credit card , debit card ,venmo, zelle accepted</p>
+    </div>
+
+  <div class="impact-statement">
+    <p>Here's how your donation can help:</p>
+    <ul>
+      <li><strong>$1</strong> can help plant <span class="impact-value">1</span> trees.</li>
+      <li><strong>$5</strong> can help plant <span class="impact-value">5</span> trees.</li>
+      <li><strong>$25</strong> can help protect <span class="impact-value">1 acre</span> of forest for a month.</li>
+      <li><strong>$50</strong> can support education programs for local communities on sustainable forestry.</li>
+      <li><strong>$100</strong> can help plant <span class="impact-value">100</span> trees.</li>
+      
+    </ul>
+    <p>These are examples, please adjust based on the organization you are supporting.</p>
+  </div>
+
+  <div class="call-to-action">
+    <p>Click a button above or enter a custom amount to donate now. Thank you for your support!</p>
+  </div>
+</section>
+
+<style>
+  #donate {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .donation-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .donation-button, #custom-donate-button {
+    padding: 10px 20px;
+    border: 1px solid #4CAF50; /* Green color for positive action */
+    background-color: #e6ffe6; /* Light green background */
+    color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  .donation-button:hover, #custom-donate-button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .custom-amount {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  #custom-donation {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+  }
+
+  .payment-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .impact-statement {
+    margin-top: 20px;
+    text-align: left;
+    padding: 15px;
+    background-color: #f0fff0; /* Very light green */
+    border: 1px solid #ccffcc;
+    border-radius: 5px;
+  }
+
+  .impact-statement ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .impact-statement li {
+    margin-bottom: 5px;
+  }
+
+  .impact-value {
+    font-weight: bold;
+    color: #2e8b57; /* Darker green */
+  }
+
+  .call-to-action {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Basic JavaScript to handle button clicks (you'll need to integrate with a payment gateway)
+  const donationButtons = document.querySelectorAll('.donation-button');
+  const customDonateButton = document.getElementById('custom-donate-button');
+  const customAmountInput = document.getElementById('custom-donation');
+
+  donationButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const amount = this.dataset.amount;
+      alert(`You clicked to donate $${amount}. (Integration with payment gateway needed)`);
+      // In a real scenario, you would redirect the user to a payment page with this amount.
+    });
+  });
+
+  customDonateButton.addEventListener('click', function() {
+    const amount = customAmountInput.value;
+    if (amount && parseFloat(amount) > 0) {
+      alert(`You entered $${amount} as a custom donation. (Integration with payment gateway needed)`);
+      // In a real scenario, you would redirect the user to a payment page with this amount.
+    } else {
+      alert('Please enter a valid donation amount.');
+    }
+  });
+</script>
+            
+        </main>
+        <footer></footer>
+    </body>
+</html>
